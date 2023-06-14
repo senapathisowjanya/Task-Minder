@@ -1,10 +1,15 @@
 const jwt =require("jsonwebtoken")
+const logoutModel = require("../Model/logout.schema")
 require("dotenv").config()
 
-const auth=(req,res,next)=>{
+const auth=async(req,res,next)=>{
     const {token}=req.cookies
-    console.log(token)
+    // console.log(token)
+
     try{
+        const log=await logoutModel.findOne({token:token})
+        if(!log){
+
         if(token){
             const decoded=jwt.verify(token,process.env.secret_key)
             if(decoded){
@@ -15,10 +20,14 @@ const auth=(req,res,next)=>{
         }else{
             res.json({msg:"Invalid token"})
         }
+    }else{
+        return res.json({msg:"Invalid token Please login Again"})
+    }
 
     }catch(err){
        res.json({err:err.message})
     }
+
 }
 
 module.exports=auth
