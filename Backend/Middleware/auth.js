@@ -2,7 +2,7 @@ const jwt =require("jsonwebtoken")
 const logoutModel = require("../Model/logout.schema")
 require("dotenv").config()
 
-const auth=async(req,res,next)=>{
+const auth = async(req,res,next)=>{
     const {token}=req.cookies
     // console.log(token)
 
@@ -12,9 +12,10 @@ const auth=async(req,res,next)=>{
 
         if(token){
             const decoded=jwt.verify(token,process.env.secret_key)
+            console.log(decoded)
             if(decoded){
              req.body.userID=decoded.userID
-             req.body.name=decoded.name
+             req.body.userName=decoded.userName
              next()
             }
         }else{
@@ -30,4 +31,4 @@ const auth=async(req,res,next)=>{
 
 }
 
-module.exports=auth
+module.exports = auth
