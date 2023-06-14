@@ -3,6 +3,7 @@ const jwt=require("jsonwebtoken")
 const bcrypt = require("bcrypt");
 const userModel = require('../Model/user.Schema');
 const logoutModel = require('../Model/logout.schema');
+const auth = require('../Middileware/auth');
 require("dotenv").config();
 const userRouter=express.Router();
 
@@ -82,6 +83,10 @@ userRouter.get("/logout",async(req,res)=>{
     }catch(err){
         res.json({msg:err.message})
     }
+})
+
+userRouter.get("/",auth,(req,res)=>{
+    res.json({msg:"hello user"})
 })
 
 module.exports =userRouter
