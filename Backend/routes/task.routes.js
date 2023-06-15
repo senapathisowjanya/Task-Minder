@@ -1,7 +1,7 @@
 const express = require("express");
 const { TaskModel } = require("../Model/task.model")
 const taskRouter = express.Router();
-const auth  = require('../Middleware/auth');
+const auth = require('../Middleware/auth');
 const { ProjectModel } = require('../Model/project.model');
 
 
@@ -10,7 +10,7 @@ taskRouter.post('/create', auth, async (req, res) => {
   console.log(project_name)
   try {
     const project = await ProjectModel.findOne({ project_name });
-   // console.log('line 13', project)
+    // console.log('line 13', project)
     if (project) {
       const payload = { ...req.body, project_id: project._id }
 
@@ -37,5 +37,15 @@ taskRouter.post('/create', auth, async (req, res) => {
 //   "project_name": "project1",
 //   "description": "desc1"
 //     }
+
+
+taskRouter.get('/', auth, async (req, res) => {
+  try {
+    const tasks = await TaskModel.find({ userID: req.body.userID });
+    res.json({ tasks })
+  } catch (error) {
+    res.json({ error })
+  }
+});
 
 module.exports = { taskRouter };
