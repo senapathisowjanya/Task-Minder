@@ -14,5 +14,14 @@ projectRouter.post('/create', auth, async(req, res) => {
   }
 });
 
+projectRouter.get('/', auth, async (req, res) => {
+  try {
+    const projects = await ProjectModel.find({ userID: req.body.userID });
+    res.json({ projects })
+  } catch (error) {
+    res.json({ error })
+  }
+});
+
 
 module.exports = {projectRouter}
