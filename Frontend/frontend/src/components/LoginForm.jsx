@@ -7,8 +7,10 @@ import {
     Text,
   } from "@chakra-ui/react";
   import axios from "axios";
-  import { useState, useReducer } from "react";
+  import { useState } from "react";
   import { IoMdEye, IoMdEyeOff } from "react-icons/io";
+import { useDispatch, useSelector } from "react-redux";
+import { postLoginData } from "../Redux/authReducer/action";
 //   import { ToastContainer, toast } from "react-toastify";
 //   import "react-toastify/dist/ReactToastify.css";
 //   import { useNavigate } from "react-router-dom";
@@ -16,23 +18,35 @@ import {
  
   export const LoginForm = () => {
     // const Navigate = useNavigate();
-  
+    const [email,setEmail]=useState("")
+    const [password,setPassword]=useState("")
+
     const [show, setShow] = useState(false);
-    // const [state, dispatch] = useReducer(reducer, initState);
+  
+    const data= useSelector((store)=> store)
+
+    const dispatch=useDispatch()
+    
     const handleClick = () => setShow(!show);
   
+ const handalSubmit=(e)=>{
+    e.preventDefault()
+    
+    dispatch(postLoginData(email,password))
+ }
     
     return (
-      <form >
+      <form onSubmit={handalSubmit} >
         <FormControl>
           <Input
             
-            value={""}
+            value={email}
             name="email"
             size="md"
             variant="flushed"
             type="email"
             placeholder="Enter Email"
+            onChange={(e)=> setEmail(e.target.value)}
           />
           <FormHelperText></FormHelperText>
         </FormControl>
@@ -40,13 +54,14 @@ import {
           <InputGroup size="md">
             <Input
             
-              value={""}
+              value={password}
               name="password"
               size="md"
               variant="flushed"
               pr="4.5rem"
               type={show ? "text" : "password"}
               placeholder="Enter password"
+              onChange={(e)=> setPassword(e.target.value)}
             />
             <InputRightElement width="4.5rem">
               <Text h="1.75rem" size="sm" onClick={handleClick}>
