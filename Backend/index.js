@@ -4,6 +4,7 @@ const userRouter = require('./routes/users.routes');
 var cookieParser = require('cookie-parser');
 const { taskRouter } = require('./routes/task.routes');
 const { projectRouter } = require('./routes/project.routes');
+const {addMinRouter} = require("./routes/admin.routes")
 
 require("dotenv").config();
 const app = express();
@@ -13,6 +14,7 @@ app.use(cookieParser())
 app.use("/users",userRouter)
 app.use('/task', taskRouter);
 app.use("/project", projectRouter)
+app.use("/admin", addMinRouter)
 app.listen(process.env.port,async()=>{
     try{
      await db_connect
