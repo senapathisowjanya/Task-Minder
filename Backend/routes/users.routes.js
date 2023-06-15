@@ -85,8 +85,8 @@ userRouter.get("/logout", async (req, res) => {
     }
 })
 
-userRouter.get("/", auth, (req, res) => {
-    res.json({ msg: "hello user" })
-})
+// userRouter.get("/", auth, (req, res) => {
+//     res.json({ msg: "hello user" })
+// })
 
 module.exports = userRouter
