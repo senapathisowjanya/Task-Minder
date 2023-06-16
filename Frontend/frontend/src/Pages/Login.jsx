@@ -12,6 +12,7 @@ import {
     Heading,
     Center,
   } from "@chakra-ui/react";
+  import { ToastContainer, toast} from "react-toastify";
 //   import { Link } from "react-router-dom";
   import { LoginForm } from "../components/LoginForm";
   import logo from "../Assets/Task.png"
@@ -52,6 +53,7 @@ import {
             </ModalFooter>
           </ModalContent>
         </Modal>
+        <ToastContainer/>
       </>
     );
   }

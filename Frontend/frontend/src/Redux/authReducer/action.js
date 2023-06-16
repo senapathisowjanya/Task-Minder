@@ -1,5 +1,6 @@
 import axios from "axios"
 import { LOGIN_FAILURE, LOGIN_REQUEST, LOGIN_SUCCESS } from "./actionTypes"
+import { toast } from "react-toastify"
 
 
 export const postLoginData=(email,password)=>(dispatch)=>{
@@ -9,9 +10,19 @@ export const postLoginData=(email,password)=>(dispatch)=>{
        password
     }
     dispatch({type:LOGIN_REQUEST})
-    axios.post(`https://reqres.in/api/login`,loginData)
+   return axios.post(`https://reqres.in/api/login`,loginData)
     .then((res)=>{
-      console.log(res.data.token)
+        console.log(res.data.token) 
+          if(res.data.token){
+            
+          toast.success("Login successfull!!", {
+          position: "top-center",
+          theme: "colored",
+        });
+
+          }
+            
+         localStorage.setItem("token",res.data.token)
       dispatch({type:LOGIN_SUCCESS,payload:res.data.token})
     })
     .catch((err)=>{
@@ -19,6 +30,8 @@ export const postLoginData=(email,password)=>(dispatch)=>{
       dispatch({type:LOGIN_FAILURE})
     })
   }
+
+ 
   
   
  

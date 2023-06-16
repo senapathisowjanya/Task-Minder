@@ -5,14 +5,18 @@ import {
     InputGroup,
     InputRightElement,
     Text,
+    Toast,
   } from "@chakra-ui/react";
-  import axios from "axios";
+ 
   import { useState } from "react";
   import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { useDispatch, useSelector } from "react-redux";
 import { postLoginData } from "../Redux/authReducer/action";
-//   import { ToastContainer, toast } from "react-toastify";
-//   import "react-toastify/dist/ReactToastify.css";
+
+
+
+ import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 //   import { useNavigate } from "react-router-dom";
   
  
@@ -23,16 +27,17 @@ import { postLoginData } from "../Redux/authReducer/action";
 
     const [show, setShow] = useState(false);
   
-    const data= useSelector((store)=> store)
+    // const data= useSelector((store)=> store)
 
     const dispatch=useDispatch()
     
     const handleClick = () => setShow(!show);
   
  const handalSubmit=(e)=>{
-    e.preventDefault()
+    e.preventDefault(email,password)
     
     dispatch(postLoginData(email,password))
+    
  }
     
     return (
@@ -79,7 +84,8 @@ import { postLoginData } from "../Redux/authReducer/action";
           type="submit"
           value="Login"
         />
-        {/* <ToastContainer /> */}
+        <ToastContainer />
+        
       </form>
     );
   };
