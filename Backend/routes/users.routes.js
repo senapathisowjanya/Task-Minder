@@ -35,13 +35,13 @@ userRouter.post("/register", async (req, res) => {
     }
     else {
         let obj = {
-            1: "Password should contain at least one Uppercharacter",
-            2: "Password should contain at least one Number",
-            3: "Password should contain at least one Symbol",
-            4: "Password should contain length at least 8 Character"
+            one: "Password should contain at least one Uppercharacter",
+            two: "Password should contain at least one Number",
+            three: "Password should contain at least one Symbol",
+            four: "Password should contain length at least 8 Character"
         }
         res.json(obj)
-        return res.end()
+        //return res.end()
         // res.write({msg:"Password should contain at least one Number"})
         // res.write({msg:"Password should contain at least one Symbol"})
         // res.write({msg:"Password should contain length at least 8 Character"})
