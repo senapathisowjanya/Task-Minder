@@ -14,16 +14,21 @@
     position: fixed;
     z-index: 90;
     top: 0;
-    color: white;
     padding-top: 3cm;
 }
 .home_body_sidebar > div{
     padding: 10px 15px;
-    transition: 0.3s;
+    transition: 0.4s;
     font-size: 15px;
+}
+.home_body_sidebar > div > p{
+    color: rgb(219, 218, 218);
 }
 .home_body_sidebar > div > p:hover{
     color: rgb(82, 67, 170);
+}
+.home_body_sidebar > span > p{
+    color: rgb(199, 199, 199);
 }
 .home_body_sidebar > span{
     position: absolute;
@@ -85,18 +90,18 @@
     margin: 5px 15px;
     display: flex;
     align-items: center;
-    border-bottom: 1.5px solid #06162100;
+    border-bottom: 1.6px solid #06162100;
     transition: 0.4s;
     color: rgb(95, 95, 95);
 }
 .nav_bar > div > div > p:hover{
-    border-bottom: 1.5px solid #00ed96;
+    border-bottom: 1.6px solid rgb(0, 204, 245);
 }
 .nav_bar > div img{
     width: 40px;
-    background-color: rgb(237, 80, 180);
+    background-color: rgb(255, 255, 255);
     margin: 10px 20px;
-    border: 1px solid black;
+    border: 1.5px solid rgb(3, 213, 255);
     border-radius: 50%;
     padding: 5px;
     fill: grey;
@@ -112,11 +117,33 @@
 
 .home_body_1{
     width: 100%;
-    height: 350px;
-    border: 1px solid #00ed96;
+    /* border: 1px solid #00ed96; */
     margin-bottom: 1cm;
+    text-align: center;
+    padding: 60px 0;
 }
-
+.home_body_1 > h1{
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+}
+.home_body_1 > p{
+    font-size: 17px;
+    font-weight: lighter;
+    color: rgb(219, 219, 219);
+}
+.home_body_1 > button{
+    background-color: #2684FF;
+    color: white;
+    width: 250px;
+    height: 45px;
+    margin: 60px 0 20px 0;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+.home_body_1 > button:hover{
+    background-color: #15232c;
+}
 /* ----------------- home_body_2--------------- */
 
 .home_body_2{
@@ -137,6 +164,7 @@
     border-radius: 20px;
 }
 .home_body_2 > div > h1{
+    color: white;
     font-size: 30px;
     font-weight: bold;
 }
@@ -145,20 +173,19 @@
     font-size: 15px;
     font-family: sans-serif;
     font-weight: lighter;
-    color: rgb(207, 207, 207);
+    color: rgb(220, 220, 220);
 }
 .home_body_2 > div > button{
     width: 200px;
     height: 40px;
-    /* background-color: #00ed96; */
-    background: url("//images.ctfassets.net/rz1oowkt5gyp/6bFuTiN5YQ78rFkHb3aJlo/b608362b08e14f5dec4c4aeea3a3ca72/white-wave-mobile.svg") center bottom -0.5px / 100% 24% no-repeat scroll padding-box border-box, linear-gradient(60deg, rgb(82, 67, 170), rgb(237, 80, 180)) 0% 0% / auto no-repeat scroll padding-box border-box rgb(82, 67, 170);
+    background-color: white;
     color: #061721;
     margin: 15px 0;
     transition: 0.4s;
 }
 .home_body_2 > div > button:hover{
     background-color: #061721;
-    color: #00ed96;
+    color: rgb(237, 80, 180);
 }
 /* ----------------home_body_3----------- */
 .home_body_3{
@@ -169,7 +196,7 @@
     margin-top: 1cm;
     border-radius: 20px;
     padding: 10px;
-    border: 1.3px solid #00ed96;
+    border: 1.3px solid #ffffff;
 }
 .home_body_3 > div{
     width: 50%;
@@ -178,20 +205,21 @@
     /* border: 1px solid red; */
 }
 .home_body_3 > div:nth-child(1){
-    border-right: 1.5px solid #00ed96e8;
+    border-right: 1.5px solid #ffffffe8;
 }
 .home_body_3 > div > h1{
     font-size: 30px;
     font-weight: bold;
     margin: 15px 0;
-    color: rgb(205, 205, 205);
+    color: rgb(255, 255, 255);
 }
 .home_body_3 > div > p{
     font-size: 14px;
     font-weight: lighter;
+    color: rgb(241, 241, 241);
 }
 .home_body_3 > div b{
-    color: #00ed96b2;
+    color: rgb(53, 53, 53);
 }
 
 /* ---------------home_body_4------------- */
@@ -208,10 +236,11 @@
     font-size: 30px;
     font-weight: bold;
     margin: 15px auto;
+    color: rgb(228, 228, 228);
 }
 .home_body_4 > h2{
     width: 10%;
-    border: 1px solid #00ed96;
+    border: 1.2px solid rgb(255, 255, 255);
     margin: auto;
     margin-bottom: 1cm;
 }
@@ -222,39 +251,90 @@
 }
 .home_body_4 > div > div{
     width: 100%;
-    text-align: center;
-    background-color: #05131c;
+    background-color: white;
     border-radius: 15px;
-    padding: 45px 10px;
+    /* padding: 45px 10px; */
     font-size: 14px;
     color: #d4d4d4;
-    border: 1.2px solid #00ed9600;
+    border: 1.2px solid #2684FF;
 }
-.home_body_4 > div > div:hover{
-    border: 1.2px solid #00ed96;
+.home_body_4 > div > div > h3{
+    background-color: #2684FF;
+    padding: 15px;
+    font-size: 18px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-bottom: 20px;
+    color: white;
+}
+.home_body_4 > div > div > p{
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 10px 0px 30px 20px;
 }
 .home_body_5{
     margin: 1cm auto 2cm auto;
+    background: url(//images.ctfassets.net/rz1oowkt5gyp/7KgS3XVFhGu3TiclJKloEp/c10aad1…/ViewsBackground_Left_Narrow.svg) left center / contain no-repeat scroll padding-box border-box, url(//images.ctfassets.net/rz1oowkt5gyp/2HisRmboWIdXSYaaUSDzon/dadecff…/ViewsBackground_Right_Narrow.svg) right center / contain no-repeat scroll padding-box border-box, linear-gradient(240deg, rgb(0, 184, 217), rgb(0, 101, 255)) 0% 0% / auto repeat scroll padding-box border-box rgb(0, 101, 255);
+    width: 100%;
+    padding: 50px 0;
+}
+.home_body_5 > div{
+    width: 90%;
+    display: flex;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 25px 10px;
+    justify-content: space-around;
+    margin: 1cm auto;
+}
+.home_body_5 > div > div{
+    width: 45%;
+    /* border: 1px solid red; */
+}
+.home_body_5 > div > div:nth-child(2){
+    padding: 15px;
+
+}
+.home_body_5 > div > div > h3{
+    font-size: 18px;
+    font-weight: bolder;
+    color: rgb(82, 82, 82);
+    margin: 10px 0 20px 0;
+}
+.home_body_5 > div > div > p{
+    font-size: 16px;
+    color: rgb(111, 111, 111);
+}
+.home_body_5 > div > div > img{
+    width: 100%;
+    height: 100%;
+    margin-left: -1px;
+    border-radius: 10px;
 }
 .join_now_btn button{
     display: block;
     width: 30%;
     height: 50px;
-    background-color: #00ed96;
-    color: #05131c;
+    background-color: rgb(0, 186, 219);
+    color: #ffffff;
     margin: 1.5cm auto 2cm auto;
     border-radius: 10px;
     transition: 0.3s;
     font-size: 20px;
     font-weight: lighter;
 }
+
+
 .join_now_btn button:hover{
     background-color: #061721;
-    color: #00ed96;}
+    color: rgb(0, 210, 247);}
 
 
 @media screen and (min-width:0px) and (max-width:1000px){
-
+.home_body_1 > h1{
+    font-size: 30px;
+}
 .home_body_2 > div{
     width: 50%;
 }
@@ -266,8 +346,16 @@
 }
 .home_body_4 > div > div{
     border-radius: 15px;
-    padding: 40px 8px;
     font-size: 12px;
+}
+.home_body_5 > div{
+    width: 95%;
+    display: flex;
+    border-radius: 15px;
+    padding: 15px 7px;
+}
+.home_body_5 > div > div{
+    width: 47%;
 }
 .join_now_btn button{
     display: block;
@@ -281,15 +369,24 @@
 }
 
 @media screen and (min-width:0px) and (max-width:700px){
-    
+.home_body_1 > h1{
+    font-size: 20px;
+}
+.home_body_1 > p{
+    font-size: 13px;
+}
 .nav_bar > div > h1{
-    font-size: 14px;
+    font-size: 13px;
     font-weight: bold;
     margin: 0 10px;
+    padding: 2px 6px 2px 5px;
 }
 .home_body_2{
     width: 95%;
     display: block;
+}
+.home_body_2 > div > h1{
+    font-size: 20px;
 }
 .home_body_2 > div{
     margin: 0.5cm auto;
@@ -315,8 +412,17 @@
 }
 .home_body_4 > div > div{
     border-radius: 15px;
-    padding: 30px 10px;
-    font-size: 12px;
+    font-size: 13px;
+}
+.home_body_5 > div{
+    width: 94%;
+    display: block;
+    border-radius: 15px;
+    padding: 15px 7px;
+}
+.home_body_5 > div > div{
+    width: 97%;
+    margin: auto;
 }
 .join_now_btn button{
     display: block;
