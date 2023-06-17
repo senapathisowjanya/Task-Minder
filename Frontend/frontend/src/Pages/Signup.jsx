@@ -16,7 +16,7 @@ import {
 //   import { Link } from "react-router-dom";
   import {SignupForm} from "../components/SignupForm"
   
-  import logo from "../Assets/Task.png"
+  import logo from "../assets/Task.png"
   function Signup() {
     const { isOpen, onOpen, onClose } = useDisclosure();
   

@@ -14,7 +14,7 @@ import {
   } from "@chakra-ui/react";
 //   import { Link } from "react-router-dom";
   import { LoginForm } from "../components/LoginForm";
-  import logo from "../Assets/Task.png"
+  import logo from "../assets/Task.png"
   function Login() {
     const { isOpen, onOpen, onClose } = useDisclosure();
   

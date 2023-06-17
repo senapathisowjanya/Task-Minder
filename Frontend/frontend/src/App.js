@@ -3,6 +3,7 @@ import './App.css';
 
 import Login from "./Pages/Login"
 import Signup from "./Pages/Signup"
+import Inbox from './components/Inbox';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <div className="App">
        <Login/>
        <Signup/>
+       {/* <Inbox /> */}
     </div>
   );
 }
