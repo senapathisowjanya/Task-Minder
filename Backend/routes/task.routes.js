@@ -6,28 +6,21 @@ const { ProjectModel } = require('../Model/project.model');
 
 
 taskRouter.post('/create', auth, async (req, res) => {
-  const { project_name } = req.body;
-  console.log(project_name)
+  const { project_name, userName, userID } = req.body;
   try {
-    const project = await ProjectModel.findOne({ project_name });
-    // console.log('line 13', project)
-    if (project) {
-      const payload = { ...req.body, project_id: project._id }
-
-      const task = new TaskModel(payload);
-      //console.log('project exist', payload)
-      await task.save();
-      res.json({ msg: 'new task is added', task: payload })
-    } else {
-      const task = new TaskModel(req.body);
-      //console.log(req.body)
-      await task.save();
-      res.json({ msg: 'new task is added', task: req.body })
+    let project = await ProjectModel.findOne({ project_name });
+    if (!project) {
+      project = new ProjectModel({ project_name, userName, userID });
+      await project.save();
     }
 
+    const payload = { ...req.body, project_id: project._id };
+    const task = new TaskModel(payload);
+    await task.save();
 
+    res.json({ msg: 'New task is added', task: payload });
   } catch (error) {
-    res.json({ error: error })
+    res.json({ error: error });
   }
 });
 
@@ -45,6 +38,76 @@ taskRouter.get('/', auth, async (req, res) => {
     res.json({ tasks })
   } catch (error) {
     res.json({ error })
+  }
+});
+
+// taskRouter.patch('/update/:taskID', auth, async (req, res) => {
+//   //userid is user doc === userid in task doc
+//   const userIDinUserDoc = req.body.userID
+//   const { taskID } = req.params;
+//   const { project_name } = req.body;
+//   try {
+//     const project = await ProjectModel.findOne({ project_name });
+//     const projectIDinProjectDoc  = project._id
+//     const task = await TaskModel.findOne({ _id: taskID })
+//     const userIDinTaskDoc = task.userID;
+//     const projectIDinTaskDoc = task.project_id;
+//      //console.log("line 64", projectIDinTaskDoc)
+ 
+//       if (userIDinUserDoc === userIDinTaskDoc && projectIDinProjectDoc == projectIDinTaskDoc) {
+//         await TaskModel.findByIdAndUpdate({ _id: taskID }, req.body);
+//         res.json({ msg: `task is updated` })
+//       } else {
+//         res.json({ msg: "Not Authorized!" })
+//       }
+    
+   
+//   } catch (error) {
+//     res.json({ error })
+//   }
+// });
+
+taskRouter.patch('/update/:taskID', auth, async (req, res) => {
+  const { taskID } = req.params;
+  const { project_name, userID } = req.body;
+  try {
+    const project = await ProjectModel.findOne({ project_name });
+    const task = await TaskModel.findOne({ _id: taskID });
+
+    if (!project || !task) {
+      return res.json({ msg: "Task or project not found" });
+    }
+
+    if (project._id.toString() !== task.project_id.toString() || userID !== task.userID) {
+      return res.json({ msg: "Not authorized to update this task" });
+    }
+
+    await TaskModel.findByIdAndUpdate(taskID, req.body);
+    res.json({ msg: "Task is updated" });
+  } catch (error) {
+    res.json({ error });
+  }
+});
+
+taskRouter.delete('/delete/:taskID', auth, async (req, res) => {
+  const { taskID } = req.params;
+  const { project_name, userID } = req.body;
+  try {
+    const project = await ProjectModel.findOne({ project_name });
+    const task = await TaskModel.findOne({ _id: taskID });
+
+    if (!project || !task) {
+      return res.json({ msg: "Task or project not found" });
+    }
+
+    if (project._id.toString() !== task.project_id.toString() || userID !== task.userID) {
+      return res.json({ msg: "Not authorized to delete this task" });
+    }
+
+    await TaskModel.findByIdAndDelete(taskID);
+    res.json({ msg: "Task has been deleted" });
+  } catch (error) {
+    res.json({ error });
   }
 });
 
