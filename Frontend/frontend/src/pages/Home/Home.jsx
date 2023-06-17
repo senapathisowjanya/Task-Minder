@@ -27,6 +27,7 @@ export const Home = () => {
               <div>
                 <p><a href="#Home">Home</a></p>
                 <p><a href="#About">About</a></p>
+                <p><a href="#">Pricing</a></p>
                 <p><a href="/Dashboard">Dashboard</a></p>
                 <p><a href="#">Login</a></p>
               </div>

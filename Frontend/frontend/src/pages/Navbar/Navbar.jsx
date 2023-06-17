@@ -15,7 +15,9 @@ return (
             <input type="text" placeholder='Search Here...'/>
         </div>
         <div>
-            <p>P</p>
+            <p>
+                <img src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt="profile" />
+            </p>
         </div>
     </div>
 )
