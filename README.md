@@ -34,7 +34,7 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
-
+TaskMinder is an intuitive task and project management app designed specifically for individuals. With its user-friendly interface and powerful features, TaskMinder helps you stay organized, prioritize tasks, and track your progress with ease. From personal to-do lists to complex projects, TaskMinder empowers you to efficiently manage your tasks and achieve your goals.
 
 ### Features
 
