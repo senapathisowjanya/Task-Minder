@@ -5,7 +5,7 @@ const auth = require('../Middleware/auth');
 const { ProjectModel } = require('../Model/project.model');
 
 
-taskRouter.post('/create', auth, async (req, res) => {
+taskRouter.post('/create',auth, async (req, res) => {
   const { project_name, userName, userID } = req.body;
   try {
     let project = await ProjectModel.findOne({ project_name });
@@ -70,6 +70,7 @@ taskRouter.get('/', auth, async (req, res) => {
 taskRouter.patch('/update/:taskID', auth, async (req, res) => {
   const { taskID } = req.params;
   const { project_name, userID } = req.body;
+     console.log(req.body)
   try {
     const project = await ProjectModel.findOne({ project_name });
     const task = await TaskModel.findOne({ _id: taskID });

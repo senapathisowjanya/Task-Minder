@@ -29,7 +29,6 @@ export const Home = () => {
                 <p><a href="#">Pricing</a></p>
                 <p><a href="/Dashboard">Dashboard</a></p>
                 <p> <Login/></p>
-                <p> <Signup/></p>
               </div>
               : null}
             <a href="/Dashboard"><img src={'https://cdn-icons-png.flaticon.com/128/747/747376.png'} alt='user' /></a>
@@ -55,7 +54,7 @@ export const Home = () => {
           <div id='Home' className='home_body_1'>
           <h1>Task Minder brings all your  <br />tasks, teammates, and tools together</h1>
           <p>Trello brings all your tasks, teammates, and tools together</p>
-          <button>Sign up - it’s free!</button>
+          <button><Signup/></button>
           </div>
           <div id='About' className='home_body_2'>
             <div>
