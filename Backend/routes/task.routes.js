@@ -32,14 +32,38 @@ taskRouter.post('/create',auth, async (req, res) => {
 //     }
 
 
+// taskRouter.get('/', auth, async (req, res) => {
+//   const {project} = req.query;
+//   try {
+//     let tasks;
+//     if(project){
+//       tasks = await TaskModel.find({ userID: req.body.userID, project_id: project._id });
+//     } else {
+//       tasks = await TaskModel.find({ userID: req.body.userID });
+//     }
+//     res.json({ tasks })
+//   } catch (error) {
+//     res.json({ error })
+//   }
+// });
+
 taskRouter.get('/', auth, async (req, res) => {
+  const { project } = req.query;
+  const { userID } = req.body;
+  console.log("line 53")
   try {
-    const tasks = await TaskModel.find({ userID: req.body.userID });
-    res.json({ tasks })
+    let tasks;
+    if (project) {
+      tasks = await TaskModel.find({ userID, project_name: project});
+    } else {
+      tasks = await TaskModel.find({ userID });
+    }
+    res.json({ tasks });
   } catch (error) {
-    res.json({ error })
+    res.json({ error });
   }
 });
+
 
 // taskRouter.patch('/update/:taskID', auth, async (req, res) => {
 //   //userid is user doc === userid in task doc

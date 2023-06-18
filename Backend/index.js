@@ -5,11 +5,12 @@ var cookieParser = require('cookie-parser');
 const { taskRouter } = require('./routes/task.routes');
 const { projectRouter } = require('./routes/project.routes');
 const {addMinRouter} = require("./routes/admin.routes")
+
 const cors=require("cors")
+
 
 require("dotenv").config();
 const app = express();
-
 app.use(cors())
 app.use(express.json());
 app.use(cookieParser())
