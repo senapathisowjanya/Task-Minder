@@ -20,13 +20,6 @@
           <li><a href="#tools-and-libraries">Tools And Libraries</a></li>
       </ul>
     </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
     <li><a href="#contributors">Contributors</a></li>
   </ol>
 </details>
@@ -49,33 +42,6 @@ TaskMinder is an intuitive task and project management app designed specifically
 - [Redux] - State Management
 - [Chakra-UI] - CSS styling
 - [JWT] - JSON Web Token for authorization and authentication
-
-
-<!-- GETTING STARTED -->
-
-## Getting Started
-
-Following are the simple steps to run this project.
-
-### Prerequisites
-
-- npm
-  ```sh
-  npm install 
-  ```
-
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/senapathisowjanya/truculent-face-1803
-   ```
-3. Run
-   ```sh
-   npm start
-   ```
-4. Open http://localhost:3000 to view it in the browser 
-5. Open http://localhost:8080 for backend to run (npm run start)
 
 
 ## Contributors
