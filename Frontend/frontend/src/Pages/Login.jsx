@@ -30,6 +30,7 @@ import {
           <ModalContent style={{ width: "370px" }}>
             <Center >
             <Image
+              width={300}
               src={logo}
               alt="error"
             />

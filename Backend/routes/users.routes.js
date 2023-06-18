@@ -35,10 +35,11 @@ userRouter.post("/register", async (req, res) => {
     }
     else {
         let obj = {
-            one: "Password should contain at least one Uppercharacter",
-            two: "Password should contain at least one Number",
-            three: "Password should contain at least one Symbol",
-            four: "Password should contain length at least 8 Character"
+
+            "one": "Password should contain at least one Uppercharacter",
+            "two": "Password should contain at least one Number",
+            "three": "Password should contain at least one Symbol",
+            "four": "Password should contain length at least 8 Character"
         }
         res.json(obj)
         //return res.end()
@@ -59,7 +60,7 @@ userRouter.post("/login", async (req, res) => {
                     const token = jwt.sign({ userID: user._id, userName: user.userName }, process.env.secret_key, { expiresIn: "7 days" });
                     res.cookie("token", token, { maxAge: 1000 * 60 * 4 })
 
-                    res.json({ msg: "Login successful", token })
+                    res.json({ msg: "Login successful", token,user })
                 } else {
                     res.json({ msg: "Login failed!!" })
                 }

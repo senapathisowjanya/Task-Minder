@@ -10,9 +10,9 @@ export const postLoginData=(email,password)=>(dispatch)=>{
        password
     }
     dispatch({type:LOGIN_REQUEST})
-   return axios.post(`https://reqres.in/api/login`,loginData)
+   return axios.post(`http://localhost:8080/users/login`,loginData)
     .then((res)=>{
-        console.log(res.data.token) 
+        console.log(res.data) 
           if(res.data.token){
             
           toast.success("Login successfull!!", {
@@ -21,7 +21,7 @@ export const postLoginData=(email,password)=>(dispatch)=>{
         });
 
           }
-            
+          localStorage.setItem("user",res.data.user.userName)  
          localStorage.setItem("token",res.data.token)
       dispatch({type:LOGIN_SUCCESS,payload:res.data.token})
     })

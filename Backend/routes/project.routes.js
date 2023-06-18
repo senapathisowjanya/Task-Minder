@@ -3,7 +3,7 @@ const { ProjectModel } = require("../Model/project.model")
 const projectRouter = express.Router();
 const auth = require('../Middleware/auth');
 
-projectRouter.post('/create', auth, async(req, res) => {
+projectRouter.post('/create',auth, async(req, res) => {
   try {
     const project = new ProjectModel(req.body);
     console.log(req.body)

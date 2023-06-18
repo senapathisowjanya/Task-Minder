@@ -23,7 +23,7 @@ import {
     return (
       <>
         <Button colorScheme="black" variant="link" onClick={onOpen}>
-           Register
+         Sign up - it’s free!
         </Button>
   
         <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
@@ -31,6 +31,7 @@ import {
           <ModalContent style={{ width: "370px" }}>
             <Center >
             <Image
+              width={300}
               src={logo}
               alt="error"
             />
