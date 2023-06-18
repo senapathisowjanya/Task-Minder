@@ -36,6 +36,11 @@ TaskMinder is an intuitive task and project management app designed specifically
 ->React <br/>
 ->React Redux <br/>
 ->Express JS <br/>
+->MongoDB <br/>
+->Mongoose <br/>
+->Web Sockets<br/>
+->Socket.io <br/>
+
 
 ## Tools and Libraries 
 - [React] - UI library
@@ -46,7 +51,9 @@ TaskMinder is an intuitive task and project management app designed specifically
 
 ## Contributors
 
-Sowjanya Senapathi - [GitHub](https://github.com/senapathisowjanya)
+<h1>Sowjanya Senapathi</h1> - [GitHub](https://github.com/senapathisowjanya)
+
+
 
 Roshan Kr Routh - [GitHub](https://github.com/RoshanAAS)
 
