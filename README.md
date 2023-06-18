@@ -75,7 +75,7 @@ Following are the simple steps to run this project.
    npm start
    ```
 4. Open http://localhost:3000 to view it in the browser 
-5. Open http://localhost:8080 to backend run in the browser (npm run start)
+5. Open http://localhost:8080 for backend to run (npm run start)
 
 
 ## Contributors
