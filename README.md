@@ -51,14 +51,12 @@ TaskMinder is an intuitive task and project management app designed specifically
 
 ## Contributors
 
-<h1>Sowjanya Senapathi</h1> - [GitHub](https://github.com/senapathisowjanya)
+<h3>Sowjanya Senapathi</h3> - [GitHub](https://github.com/senapathisowjanya)
 
+<h3>Roshan Kr Routh</h3> - [GitHub](https://github.com/RoshanAAS)
 
+<h3>Raz Bhagat</h3> - [GitHub](https://github.com/raz001) 
 
-Roshan Kr Routh - [GitHub](https://github.com/RoshanAAS)
+<h3>Sourav Samanta</h3> - [GitHub]()
 
-Raz Bhagat - [GitHub](https://github.com/raz001) 
-
-Sourav Samanta - [GitHub]()
-
-Vishal Gupta - [GitHub](https://github.com/Vishal-Gupta07)
+<h3>Vishal Gupta</h3> - [GitHub](https://github.com/Vishal-Gupta07)
