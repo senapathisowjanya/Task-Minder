@@ -47,7 +47,7 @@
 ## Tools and Libraries 
 - [React] - UI library
 - [Redux] - State Management
-- [CHAKRA-UI] - CSS styling
+- [Chakra-UI] - CSS styling
 - [JWT] - JSON Web Token for authorization and authentication
 
 
