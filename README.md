@@ -62,21 +62,21 @@ Experience the power of Task Minder and revolutionize your project management ap
 
 ## Contributors
 
------><h3>Team Member1</h3><h3>Sowjanya Senapathi(Team Lead)</h3>- [GitHub](https://github.com/senapathisowjanya)
+<h3>----->Team Member1:- Sowjanya Senapathi(Team Lead)</h3>- [GitHub](https://github.com/senapathisowjanya)
 She is the responsibe for Backend part of SignIn,Login,Registration and logout routes.Whenever user wants to register,login or logout the routes should working dynamically.All the users data stored in the mongoDb atlas.
 In the frontend she is also responsible for Inbox page,where users chat with the team members,this is also working dynamically.For this Index page she is responsible for backend and Frontend also.
 
------><h3>Team Member2</h3><h3>Roshan Kr Routh</h3> - [GitHub](https://github.com/RoshanAAS)
+<h3>----->Team Member2:- Roshan Kr Routh</h3> - [GitHub](https://github.com/RoshanAAS)
 He is the responsible for Frontend Pages.In frontend he made User home page ,Login Page,SignUp page,Projects page,My Tasks Page.All his pages are working dynamically and its looking user-friendly,and also every page is looking good at different screens like for small screen is working well, and medium and large screens also.
 
------><h3>Team Member3</h3><h3>Raz Bhagat</h3> - [GitHub](https://github.com/raz001) 
+<h3>----->Team Member3:- Raz Bhagat</h3> - [GitHub](https://github.com/raz001) 
 He is the responsible for Backend routes of crud operations of Tasks.In the backend he made GET,POST,PATCH,DELETE routes for tasks.All the routes are dynamic from the backend and frontend also.
 he is also responsible for Pricing page in the frontend.It is looking user-friendly and working dynamically.
 
------><h3>Team Member4</h3><h3>Sourav Samanta</h3> - [GitHub]()
+<h3>----->Team Member4:- Sourav Samanta</h3> - [GitHub]()
 He is the responsible for Frontend Pages.In frontend he made Main home page ,About Page,User Home page.All his pages are working dynamically and its looking user-friendly,and also every page is looking good at different screens like for small screen is working well, and medium and large screens also.
 
------><h3>Team Member5</h3><h3>Vishal Gupta</h3> - [GitHub](https://github.com/Vishal-Gupta07)
+<h3>----->Team Member5:- Vishal Gupta</h3> - [GitHub](https://github.com/Vishal-Gupta07)
 He is the responsible for Admin pannel.He made the both the frontend and Backend for admin page.Here we can see the who are admin for this website.Through this admin page admin can delete the user ,edit the user details .
 
 
