@@ -5,12 +5,15 @@ import { useState } from 'react';
 import { Footer } from '../Pages/Footer';
 import Login from "./Login"
 import Signup  from './Signup'
+import { useSelector } from 'react-redux';
 
 export const Home = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isSmallerThan800] = useMediaQuery("(max-width: 800px)");
   const [isSmallerThan500] = useMediaQuery("(max-width: 500px)");
+  const isAuth = useSelector((state)=> state.authReducer.isAuth);
 
+  console.log(isAuth)
 
   return (
     <div>
@@ -27,7 +30,8 @@ export const Home = () => {
                 <p><a href="#Home">Home</a></p>
                 <p><a href="#About">About</a></p>
                 <p><a href="#">Pricing</a></p>
-                <p><a href="/Dashboard">Dashboard</a></p>
+                {isAuth?<p><a href="/Dashboard">Dashboard</a></p>:<p><button onClick={()=>alert('Please Login!!!')}>Dashboard</button></p>}
+                
                 <p> <Login/></p>
               </div>
               : null}
