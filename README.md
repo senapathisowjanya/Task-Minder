@@ -81,3 +81,7 @@ He is the responsible for Admin pannel.He made the both the frontend and Backend
 
 
 ## Some Glimpse of our Cloned Website
+## Glimpse of our Landing Page
+![Screenshot (288)](https://github.com/senapathisowjanya/truculent-face-1803/assets/119430125/5797b208-7483-41dc-9f63-88e7de7a3056)
+
+
