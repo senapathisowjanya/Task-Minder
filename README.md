@@ -6,7 +6,7 @@
 
 <h1 align="center">"Task and Project Management"  </h1>
 <h3 align="center">
-	<a href="#">Live URL</a>
+	<a href="https://celebrated-rabanadas-4e63d6.netlify.app/">Live URL</a>
 </h3>
   
 <!-- TABLE OF CONTENTS -->
