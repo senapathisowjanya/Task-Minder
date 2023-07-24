@@ -53,3 +53,5 @@ Vishal Gupta - [GitHub](https://github.com/Vishal-Gupta07)
 ![Screenshot (288)](https://github.com/senapathisowjanya/truculent-face-1803/assets/119430125/5797b208-7483-41dc-9f63-88e7de7a3056)
 
 
+![Screenshot (333)](https://github.com/senapathisowjanya/truculent-face-1803/assets/119430125/37298c5a-83b2-44f6-a7c9-938aae71ade9)
+![Screenshot (334)](https://github.com/senapathisowjanya/truculent-face-1803/assets/119430125/e93ec16e-142c-428a-9580-6ea48b516f5d)
