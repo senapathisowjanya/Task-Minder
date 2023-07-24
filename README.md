@@ -50,8 +50,13 @@ Vishal Gupta - [GitHub](https://github.com/Vishal-Gupta07)
 
 ## Some Glimpse of our Cloned Website
 ## Glimpse of our Landing Page
+## Home page
 ![Screenshot (288)](https://github.com/senapathisowjanya/truculent-face-1803/assets/119430125/5797b208-7483-41dc-9f63-88e7de7a3056)
 
-
+## About Page
 ![Screenshot (333)](https://github.com/senapathisowjanya/truculent-face-1803/assets/119430125/37298c5a-83b2-44f6-a7c9-938aae71ade9)
+## Login Page
 ![Screenshot (334)](https://github.com/senapathisowjanya/truculent-face-1803/assets/119430125/e93ec16e-142c-428a-9580-6ea48b516f5d)
+## Pricing Page
+
+![Screenshot (335)](https://github.com/senapathisowjanya/truculent-face-1803/assets/119430125/fa40d4a3-4aa3-4f95-b77c-2bc6164c22a8)
